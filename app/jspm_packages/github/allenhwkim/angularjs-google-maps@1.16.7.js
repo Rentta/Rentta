@@ -1,1 +1,0 @@
-module.exports = require("github:allenhwkim/angularjs-google-maps@1.16.7/build/scripts/ng-map.js");
