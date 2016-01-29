@@ -1,0 +1,95 @@
+<md-dialog aria-label="Add Apartment Contruct">
+            <form name="addForm" dir="rtl">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <md-button class="md-icon-button" ng-click="AddCtrl.cancel()">
+                            <md-icon class="material-icons" aria-label="Cancel">arrow_forward</md-icon>
+                            <md-tooltip md-delay="1500" md-autohide="true">Cancel</md-tooltip>
+                        </md-button>
+                        <h2 layout-padding>דירה חדשה</h2><span flex></span>
+                        <md-button class="md-icon-button" ng-click="AddCtrl.submit()" ng-disabled="addForm.$invalid">
+                            <md-icon class="material-icons" aria-label="submit">done</md-icon>
+                            <md-tooltip md-delay="1500" md-autohide="true">Submit</md-tooltip>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+
+                <md-dialog-content>
+                    <div layout-gt-xs="row">
+                        <md-input-container>
+                            <label>כתובת</label>
+                            <input ng-model="apt.address">
+                        </md-input-container>
+                        <md-input-container>
+                            <label layout-align="end">עיר</label>
+                            <input ng-model="apt.city">
+                        </md-input-container>
+
+                    </div>
+
+                    <div layout-gt-xs="row">
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>בניין</label>
+                            <input type="number" ng-model="apt.buildnum" required>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>קומה</label>
+                            <input type="number" ng-model="apt.floornum" required>
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-xs="row">
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>מספר חדרים</label>
+                            <input type="number" ng-model="apt.roomsNum" required>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>גודל במ"ר</label>
+                            <input type="number" ng-model="apt.size" required>
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>משופצת</label>
+                            <md-select ng-model="apt.renov">
+                                <md-option ng-repeat="renov in AddCtrl.renovatedStates" value="{{renov}}">{{renov}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>שנים מאז השיפוץ</label>
+                            <input type="number" ng-model="apt.renovYear" min="0" max="20" required>
+                        </md-input-container>
+                    </div>
+
+
+                    <div layout-gt-sm="row">
+                        <div layout="column" class="standard" flex="50">
+                            <div ng-repeat="item in AddCtrl.ops">
+                                <label>
+                                    <md-checkbox aria-label="{{item}}"
+                                                 ng-checked="AddCtrl.exists(item, AddCtrl.selected)"
+                                                 ng-click="AddCtrl.toggle(item, AddCtrl.selected)"></md-checkbox>
+                                    {{ item }}</label>
+                            </div>
+                        </div>
+                        <div layout="column" class="standard" flex="50">
+                            <div ng-repeat="item in AddCtrl.ops2">
+                                <label>
+                                    <md-checkbox aria-label="{{item}}"
+                                                 ng-checked="AddCtrl.exists(item, AddCtrl.selected)"
+                                                 ng-click="AddCtrl.toggle(item, AddCtrl.selected)"></md-checkbox>
+                                    {{ item }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>מידע נוסף</label>
+                        <textarea ng-model="apt.other" columns="1" md-maxlength="150"></textarea>
+                    </md-input-container>
+                </md-dialog-content>
+            </form>
+</md-dialog>
