@@ -31,11 +31,13 @@ angular
 
         let body = document.getElementsByTagName("body")[0];
         let app  = angular
-            .module( appName, [ material, apartments ] );
+            .module( appName, [ material, apartments ] )
+            .config(function($mdThemingProvider){
+                $mdThemingProvider.theme('default')
+                    .primaryPalette('indigo')
+                    .accentPalette('red');
+                  });
 
         angular.bootstrap( body, [ app.name ], { strictDi: false })
 
     });
-
-
-
