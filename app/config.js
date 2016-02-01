@@ -4,8 +4,9 @@ System.config({
   paths: {
     "app/*": "src/*.js",
     "apartments/*": "src/apartments/*.js",
+    "shared/": "src/shared/",
     "forms/*": "src/forms/*.js",
-    "material-start/*": "src/*.js",
+    "rentta/*": "src/*.js",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },

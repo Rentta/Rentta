@@ -1,4 +1,6 @@
 {
+  "esnext": true,
+  "esversion": 6,
   "globalstrict": true,
   "globals": {
     "angular": false,
@@ -8,6 +10,6 @@
     "beforeEach": false,
     "afterEach": false,
     "module": false,
-    "inject": false
+    "inject": false,
   }
 }

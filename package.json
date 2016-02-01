@@ -1,9 +1,9 @@
 {
-  "name": "material-start",
+  "name": "rentta-app",
   "private": true,
-  "version": "0.0.1",
-  "description": "A starter project for AngularJS Material",
-  "repository": "https://github.com/angular/material-start",
+  "version": "0.0.3",
+  "description": "Rentta: Tel Aviv",
+  "repository": "https://github.com/Rentta/Rentta",
   "licenses": [
     {
       "type": "MIT",
@@ -33,14 +33,22 @@
     }
   },
   "devDependencies": {
-    "karma": "~0.10",
-    "protractor": "^1.1.1",
-    "http-server": "^0.6.1",
     "bower": "^1.3.1",
-    "shelljs": "^0.2.6",
-    "karma-junit-reporter": "^0.2.2"
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-nodemon": "^2.0.6",
+    "http-server": "^0.6.1",
+    "jshint": "^2.9.1",
+    "karma": "~0.10",
+    "karma-junit-reporter": "^0.2.2",
+    "protractor": "^1.1.1",
+    "shelljs": "^0.2.6"
   },
   "scripts": {
     "prestart": "npm update"
-  }
+  },
+  "jshintConfig": {
+  "esversion": 6
+}
 }

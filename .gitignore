@@ -1,4 +1,4 @@
-# Logs
+# Logs
 logs
 *.log
 
@@ -11,6 +11,7 @@ pids
 /app/jspm_packages
 lib-cov
 /.idea
+/e2e-tests
 
 # Coverage directory used by tools like istanbul
 coverage
