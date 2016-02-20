@@ -10,7 +10,7 @@ import FrmCtrl from 'forms/Controllers/FormController';
 // Define the Angular 'users' module
 
 let moduleName = angular
-      .module( "contentmodule", ['ngMap'] )
+      .module( "apartments", ['ngMap'] )
       .service("usersService"   , UsersService )
     .controller("FormController", FrmCtrl)
     .controller("SideNavController" , SideNavController )
