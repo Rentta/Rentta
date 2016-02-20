@@ -1,0 +1,47 @@
+<!-- Container #1 (in wireframe) -->
+
+<md-toolbar class="md-whiteframe-z2 md-toolbar-tools" layout="row">
+    <h2>
+        <span>Renta: Tel-Aviv</span>
+    </h2>
+    <span flex></span>
+    <md-button class="menu" ng-click="ul.toggleList()" aria-label="Show apartments List">
+        <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+    </md-button>
+</md-toolbar>
+
+<!-- Container #2 (in wireframe) -->
+<md-content id="content" layout="row">
+    <md-button class="md-fab md-button md-fab-bottom-left" aria-label="Add" ng-click="ul.showAdd($event)">
+        <md-icon aria-label="Add" class="material-icons">add</md-icon>
+    </md-button>
+
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+        <md-list layout="column" layout-padding>
+            <form dir="rtl">
+                <md-input-container class="md-block" flex-gt-sm="">
+                    <label for="testInput">חפש כתובת</label>
+                    <input type="text" id="testInput" ng-model="data" md-autofocus>
+                </md-input-container>
+            </form>
+            <md-list-item ng-repeat="it in ul.users">
+                <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }">
+                    <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
+                    {{it.name}}
+                </md-button>
+            </md-list-item>
+        </md-list>
+    </md-sidenav>
+
+    <ng-map class="mymap" center="Tel-Aviv" zoom="15" disable-default-u-i="true" default-style="false"></ng-map>
+</md-content>
+
+<!-- Container #4 (in wireframe) -->
+
+<!-- <md-content id="content" flex layout="column"> -->
+
+<!-- <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon> -->
+<!-- <md-content layout-margin> -->
+<!-- <h2>{{ul.selected.name}}</h2> -->
+<!-- <p>{{ul.selected.content}}</p> -->
+<!-- </md-content> -->
