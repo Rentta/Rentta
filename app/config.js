@@ -3,7 +3,7 @@ System.config({
   transpiler: "traceur",
   paths: {
     "app/*": "src/*.js",
-    "apartments/*": "src/apartments/*.js",
+    "content/*": "src/content/*.js",
     "shared/": "src/shared/",
     "forms/*": "src/forms/*.js",
     "rentta/*": "src/*.js",

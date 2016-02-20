@@ -12,7 +12,7 @@ import ngMap from 'ngmap';
 
 
 // Load custom application modules
-import apartments from 'apartments/Apartments';
+import contentmodule from 'content/ContentModule';
 import autocomplace from 'shared/PlacesAutoComplete/PlacesAutocompleteModule';
 
 /**
@@ -28,7 +28,7 @@ angular
 
         let body = document.getElementsByTagName("body")[0];
         let app  = angular
-            .module( appName, [ material, apartments, autocomplace] )
+            .module( appName, [ material, contentmodule, autocomplace] )
             .config(function($mdThemingProvider){
                 $mdThemingProvider.theme('default')
                     .primaryPalette('indigo')
