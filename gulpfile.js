@@ -13,7 +13,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
 	browserSync.init(null, {
 		proxy: "http://localhost:5000",
         files: ["./app/**/*.*"],
-        browser: 'google-chrome',
+        browser: 'google-chrome-stable',
         port: 7000,
 	});
 });

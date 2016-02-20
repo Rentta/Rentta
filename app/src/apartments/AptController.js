@@ -36,7 +36,7 @@ function AptController(usersService, $mdSidenav, $mdDialog) {
      * Hide or Show the 'left' sideNav area
      */
     function toggleUsersList() {
-        $mdSidenav('left').toggle();
+        $mdSidenav('right').toggle();
     }
 
     /**
@@ -81,5 +81,3 @@ function AptController(usersService, $mdSidenav, $mdDialog) {
     //};
 
 }
-
-
