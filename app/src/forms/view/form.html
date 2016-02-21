@@ -6,7 +6,7 @@
                     <md-icon class="material-icons" aria-label="Cancel">arrow_forward</md-icon>
                     <md-tooltip md-delay="1500" md-autohide="true">Cancel</md-tooltip>
                 </md-button>
-                <h2 layout-padding>דירה חדשה</h2>
+                <h2 layout-padding>הוספת דירה חדשה</h2>
                 <span flex></span>
                 <md-button class="md-icon-button" ng-click="AddCtrl.submit()" ng-disabled="addForm.$invalid">
                     <md-icon class="material-icons" aria-label="submit">done</md-icon>
@@ -20,33 +20,22 @@
                 <md-tab label="כתובת">
                     <md-content class="md-padding">
 
-                        <div layout-gt-sm="row" flex>
-                            <md-input-container class="md-block" flex-gt-sm="">
-                                <places-auto-complete ng-model="apt.address"></places-auto-complete>
-                            </md-input-container>
+                        <div layout-gt-sm="column" flex>
+                            <places-auto-complete ng-model="apt.address"></places-auto-complete>
                         </div>
-                        <!-- <md-input-container>
-          <label layout-align="end">עיר</label>
-          <input ng-model="apt.city"-->
-                        <!-- </md-input-container> -->
-                        <!-- <md-input-container class="md-block" flex-gt-sm="">
-          <label>בניין</label>
-          <input type="number" ng-model="apt.buildnum" required>
-        </md-input-container> -->
-                        <div layout-gt-sm="row">
-                            <md-input-container class="md-block" flex-gt-sm="">
+                        <div layout-gt-sm="row" flex>
+                            <md-input-container class="md-padding" flex-gt-sm="">
                                 <label>קומה</label>
                                 <input type="number" ng-model="apt.floornum" required>
                             </md-input-container>
-                            <md-input-container class="md-block" flex-gt-sm="">
+                            <md-input-container class="md-padding" flex-gt-sm="">
                                 <label>מספר חדרים</label>
                                 <input type="number" ng-model="apt.roomsNum" required>
                             </md-input-container>
-                            <md-input-container class="md-block" flex-gt-sm="">
+                            <md-input-container class="md-padding" flex-gt-sm="">
                                 <label>גודל במ"ר</label>
                                 <input type="number" ng-model="apt.size" required>
                             </md-input-container>
-                        {{apt}}
                         </div>
                     </md-content>
                 </md-tab>
@@ -55,7 +44,7 @@
                         <md-input-container class="md-block" flex-gt-sm="">
                             <label>משופצת</label>
                             <md-select ng-model="apt.renov">
-                                <md-option ng-repeat="renov in AddCtrl.renovatedStates" value="{{renov}}">{{renov}}
+                                <md-option ng-repeat="renov in AddCtrl.renovatedStates">{{renov}}
                                 </md-option>
                             </md-select>
                         </md-input-container>
@@ -88,7 +77,6 @@
                         <label>מידע נוסף</label>
                         <textarea ng-model="apt.other" columns="1" md-maxlength="150"></textarea>
                     </md-input-container>
-                    <md-tab>
-        </md-dialog-content>
-    </form>
-</md-dialog>
+                    <md-tab></md-dialog-content>
+                </form>
+            </md-dialog>

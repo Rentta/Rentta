@@ -4,9 +4,6 @@ let moduleName2 = angular.module('placesAutoComp', []).directive('placesAutoComp
   return {
     restrict: 'E',
     require: "?ngModel",
-    scope: {
-      selected: '='
-    },
     templateUrl: './src/shared/PlacesAutoComplete/view/placesAutoComp.html',
     controller: pAutoCompController,
     controllerAs: 'pAutoCtrl',

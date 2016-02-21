@@ -1,9 +1,14 @@
-<md-autocomplete md-selected-item="Address.Address"
- md-search-text="pAutoCtrl.searchText"
- md-selected-item="pAutoCtrl.selected"
- md-items="place in pAutoCtrl.SearchForAddress(pAutoCtrl.searchText)"
+<md-autocomplete
+ md-search-text="searchText"
+ md-selected-item="selected"
+ md-items="place in pAutoCtrl.SearchForAddress(searchText)"
  md-selected-item-change="pAutoCtrl.getSelected(place)"
-   md-item-text="place.description"
-    md-floating-label="כתובת" dir="rtl">
-    <span md-highlight-text="searchText">{{place.description}}</span>
+ md-item-text="place.description"
+ md-floating-label="כתובת">
+ <md-item-template>
+   <span md-highlight-text="searchText" md-highlight-flags="^i">{{place.description}}</span>
+ </md-item-template>
+ <md-not-found>
+   לא נמצאה כתובות כזאת
+ </md-not-found>
 </md-autocomplete>

@@ -1,7 +1,7 @@
 /**placesAutoComp
  * Created by rabak on 1/28/16.
  */
-function FrmCtrl($mdDialog,$q) {
+function FrmCtrl($mdDialog,$q,$http) {
   this.renovatedStates = ['לא',
     'כללי',
     'מטבח בלבד',
@@ -38,7 +38,16 @@ function FrmCtrl($mdDialog,$q) {
   };
 
   this.answer = function(answer) {
-    $mdDialog.hide(answer);
+    $http.post('/api/todos', this.apt.other)
+            .success(function(data) {
+                this.apt = {}; // clear the form so our user is ready to enter another
+                $scope.todos = data;
+                console.log(data);
+                $mdDialog.hide(answer);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
   };
 
 
