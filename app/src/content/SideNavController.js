@@ -76,6 +76,7 @@ function SideNavController(usersService, $mdSidenav, $mdDialog) {
             }, function () {
                 status = 'You cancelled the dialog.';
             });
+            console.log(status);
     }
 
     //};

@@ -37,13 +37,12 @@ function FrmCtrl($mdDialog,$q,$http) {
     $mdDialog.cancel();
   };
 
-  this.answer = function(answer) {
-    $http.post('/api/todos', this.apt.other)
+  this.answer = function(ans) {
+    console.log("starting to write: ", ans);
+    $http.post('/api/newapt', ans)
             .success(function(data) {
-                this.apt = {}; // clear the form so our user is ready to enter another
-                $scope.todos = data;
                 console.log(data);
-                $mdDialog.hide(answer);
+                $mdDialog.hide();
             })
             .error(function(data) {
                 console.log('Error: ' + data);
