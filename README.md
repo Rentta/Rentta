@@ -9,8 +9,6 @@
 
 3. npm install
 
-4. npm install mongoose --save-dev
-
 5. npm install jspm --save-dev
 
 6. jspm install
