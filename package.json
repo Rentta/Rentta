@@ -44,6 +44,7 @@
     "http-server": "^0.6.1",
     "jshint": "^2.9.1",
     "jspm": "^0.16.29",
+    "mongoose": "^4.4.5",
     "protractor": "^1.1.1",
     "shelljs": "^0.2.6"
   },
